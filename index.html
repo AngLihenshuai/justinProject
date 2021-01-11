@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>    
+    <title>Justin's Recommendition</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <!--nav class="navbar navbar-dark bg-primary">
+      
+    </nav-->
+    
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <img src="img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div style="width:100%;height:600px;">
+        <img src="img/background.jpg" style="float:left;width:100%;height:100%;">
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container text-center">
+      <blockquote class="blockquote text-center">
+        <h1>Find your best recommendations here</p>        
+        <footer class="blockquote-footer">Justin Luo</footer>
+      </blockquote>      
+    </div>
+    <br>    
+    <div id="formDiv" class="container text-center col-sm-6">      
+    <br>
+      <form>
+        <div class="form-group text-left">
+          <label style="color:#1E90FF; padding-bottom:5px; font-size: 18px; float:left;">What does this Desktop Mainly For?</label>
+          <select class="form-control form-control-lg" id="select1">
+            <option>Video Game</option>
+            <option>Art graph design</option>
+            <option>Zoom Class</option>
+            <option>Coding</option>
+            <option>Machine Learning</option>
+            <option>Normal Work</option>
+            <option>Others</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">          
+          <label style="color:#1E90FF; padding-bottom:5px; font-size: 18px; float:left;">How long we will use it during 1 week?</label>
+          <select class="form-control form-control-lg" id="select2">
+            <option>0 - 8 Hours</option>
+            <option>9 - 20 Hours</option>
+            <option>21 - 40 Hours</option>
+            <option>40 - 80 Hours</option>
+            <option>more than 80 Hours</option>        
+          </select>
+        </div>
+        <br>
+        <div class="form-group">          
+          <label style="color:#1E90FF; padding-bottom:5px; font-size: 18px; float:left;">What is your expected price</label>          
+          <select class="form-control form-control-lg" id="select3">
+            <option>under 600</option>
+            <option>600 - 800</option>            
+            <option>above 800</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label style="color:#1E90FF; padding-bottom:5px; font-size: 18px; float:left;">What do your expected the storage be</label>
+          <select class="form-control form-control-lg" id="select4">
+            <option>250G</option>
+            <option>500G - 2T</option>
+            <option>More than 2T</option>          
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label style="color:#1E90FF; padding-bottom:5px; font-size: 18px; float:left;">Are you familer with assmbling PC?</label>
+          <select class="form-control form-control-lg" id="select5">
+            <option>Yes</option>
+            <option>No</option>                
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1" style="color:#1E90FF; padding-bottom:5px; font-size: 18px; float:left;">Any thing more?</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <br>
+      </form>
+      <button type="submit" onclick="showRes()" class="btn btn-primary mb-2">Check your plan</button>
+    </div>      
+
+    <div id="res_div" class="container" style="display: none;">
+      <div class="container text-center">
+        <span style="font-size: 20px">total price:</span>
+        <span style="font-size: 20px" id="price"></span>
+        <button type="button" class="btn btn-success"><a href="" style="color:white">Try again</a></button>
+      </div>
+      <br>
+      <div class="row">
+        <table id="result_table" class="table table-striped table-bordered table-dark">
+          <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Image</td>
+            <td>Link</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br>
+    <footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">Justin Luo</a>
+      </div>
+    <!-- Copyright -->
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
