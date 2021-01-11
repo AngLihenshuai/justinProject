@@ -8,9 +8,9 @@ function showRes() {
   var s5 = document.getElementById
   ("select5").value;
   
-  if (s3 == "under 600") {
+  if (s3 == "under 1000") {
     var itemList = [cpuDb['low'], mboardDb['low'], memDb['low'], storageDb['low'], gpuDb['low'], caseDb['low'], psuDb['low']]
-  } else if (s3 == "above 800") {
+  } else if (s3 == "above 2000") {
     var itemList = [cpuDb['high'], mboardDb['high'], memDb['high'], storageDb['high'], gpuDb['high'], caseDb['high'], psuDb['high']]
   } else {
     var itemList = [cpuDb['medium'], mboardDb['medium'], memDb['medium'], storageDb['medium'], gpuDb['medium'], caseDb['medium'], psuDb['medium']]
@@ -33,10 +33,10 @@ function showRes() {
   }
 
   var price = 0  
-  for (var i = 0; i < itemList.length; i++) {
-    console.log(itemList[i].price)
-    price = price + parseFloat(itemList[i].price.slice(1, -1));    
-  }    
+  for (var i = 0; i < itemList.length; i++) {    
+    price = price + parseFloat(itemList[i].price.slice(1, price.length));
+    console.log(itemList[i].price.slice(1, price.length))
+  }  
   document.getElementById("price").innerHTML = "$" + price.toString();
   document.getElementById("formDiv").style.display = "none";
   document.getElementById("res_div").style.display = "block";
@@ -70,7 +70,7 @@ var cpuDb = {
   'high' : {
     'name' : 'AMD-Ryzen 9 5950X 4th Gen 16-core',
     'link' : 'https://www.amazon.com/AMD-Ryzen-Processor-32-Threads-Architecture-Technology/dp/B08S6VCNZS/',
-    'price' : '$1,299.99',
+    'price' : '$1299.99',
     'picture' : 'img/cpu3.jpg'
   }  
 }
@@ -93,7 +93,7 @@ var mboardDb = {
   'high' : {
     'name' : 'MSI Godlike AM4 AMD X570 ATX DDR4-SDRAM',
     'link' : 'https://www.amazon.com/MSI-Godlike-X570-DDR4-SDRAM-Motherboard/dp/B07ST23K9B',
-    'price' : '$1,129.99',
+    'price' : '$1129.99',
     'picture' : 'img/mboard3.jpg'
     }
   }
